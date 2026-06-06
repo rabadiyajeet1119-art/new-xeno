@@ -9,7 +9,7 @@ app = Flask(__name__)
 # =========================
 # CONFIG & KEYS
 # =========================
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 SERPAPI_KEY = "cd194f7cdffbf618db1e90cc998ae24d7266e0d4c9cc4537b9f0cae99283cd47"
 DB_FILE = "xeno.db"
