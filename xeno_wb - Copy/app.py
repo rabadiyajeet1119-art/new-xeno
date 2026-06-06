@@ -11,7 +11,7 @@ app = Flask(__name__)
 # =========================
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-SERPAPI_KEY = "cd194f7cdffbf618db1e90cc998ae24d7266e0d4c9cc4537b9f0cae99283cd47"
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 DB_FILE = "xeno.db"
 
 # =========================
