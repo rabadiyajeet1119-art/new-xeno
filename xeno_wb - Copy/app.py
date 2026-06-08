@@ -2,7 +2,12 @@ from flask import Flask, render_template, request, jsonify
 import requests
 import re
 import sqlite3
+import os
+from dotenv import load_dotenv
 from datetime import datetime
+
+# .env file load karne ke liye
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -13,6 +18,10 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 DB_FILE = "xeno.db"
+
+# =========================
+# DATABASE HANDLER
+# =========================
 
 # =========================
 # DATABASE HANDLER
